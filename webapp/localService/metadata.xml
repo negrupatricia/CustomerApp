@@ -1,0 +1,20 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZINS_C_CUSTOMERTP_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="ZINS_C_CUSTOMERTPType" sap:label="Consumption CDS for Customer node" sap:content-version="1">
+				<Key><PropertyRef Name="cust_id"/></Key><Property Name="cust_id" Type="Edm.Int16" Nullable="false" sap:label="Customer id" sap:creatable="false" sap:updatable="false"/><Property Name="iscity" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="UpperCase" sap:label="City"/><Property Name="rating" Type="Edm.Int16" Nullable="false" sap:label="Rating"/><Property Name="crea_date_time" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:creatable="false" sap:updatable="false"/><Property Name="crea_uname" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User Name" sap:creatable="false"
+					sap:updatable="false"/><Property Name="lchg_date_time" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:creatable="false" sap:updatable="false"/><Property Name="lchg_uname" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User Name" sap:creatable="false"
+					sap:updatable="false"/><Property Name="first_name" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:label="First name"/><Property Name="last_name" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Last name"/><Property Name="licence_number" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Licence number"/><Property Name="cnp" Type="Edm.String" Nullable="false" MaxLength="15" sap:display-format="UpperCase" sap:label="CNP"/><Property Name="phonenumber" Type="Edm.String" Nullable="false" MaxLength="15" sap:display-format="UpperCase" sap:label="Phone number"/><Property Name="email" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Email"/><Property Name="adress" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Adress"/><Property Name="county" Type="Edm.Int16" Nullable="false" sap:label="County id"/></EntityType>
+			<EntityContainer Name="ZINS_C_CUSTOMERTP_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ZINS_C_CUSTOMERTP" EntityType="ZINS_C_CUSTOMERTP_SRV.ZINS_C_CUSTOMERTPType" sap:searchable="true" sap:content-version="1"/></EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZINS_C_CUSTOMERTP_SRV.ZINS_C_CUSTOMERTPType">
+				<Annotation Term="Common.SemanticKey">
+					<Collection>
+						<PropertyPath>cust_id</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZINS_C_CUSTOMERTP_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZINS_C_CUSTOMERTP_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

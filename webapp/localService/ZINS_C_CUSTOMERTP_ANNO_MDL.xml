@@ -1,0 +1,51 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference Uri="./SAP/ZINS_C_CUSTOMERTP_SRV/$metadata"><edmx:Include Namespace="ZINS_C_CUSTOMERTP_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zins_c_customertp_anno_mdl.v1">
+			<Annotations Target="ZINS_C_CUSTOMERTP_SRV.ZINS_C_CUSTOMERTPType">
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Customer"/><PropertyValue Property="TypeNamePlural" String="Customers"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField"><PropertyValue Property="Label" String="last_name"/><PropertyValue Property="Value" Path="first_name"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Customer ID"/><PropertyValue Property="Value" Path="cust_id"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="License number"/><PropertyValue Property="Value" Path="licence_number"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cnp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="phonenumber"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="email"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="adress"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="county"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iscity"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rating"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="crea_date_time"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="crea_uname"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="first_name"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="last_name"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licence_number"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="county"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="phonenumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="email"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>last_name</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
